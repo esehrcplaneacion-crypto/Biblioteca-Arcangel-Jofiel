@@ -243,20 +243,6 @@
         id="documentsGrid">
 
 
-        <!--
-        =====================================================
-        GUÍA 01
-        =====================================================
-
-        Esta tarjeta es un ejemplo.
-
-        Cuando tengas las guías reales,
-        reemplazaremos esta información.
-
-        =====================================================
-        -->
-
-
         <article class="document-card">
 
 
@@ -290,38 +276,46 @@
 
 
                     <span>
+
                         <strong>
                             Código:
                         </strong>
 
                         Por definir
+
                     </span>
 
 
                     <span>
+
                         <strong>
                             Versión:
                         </strong>
 
                         Por definir
+
                     </span>
 
 
                     <span>
+
                         <strong>
                             Fecha:
                         </strong>
 
                         Por definir
+
                     </span>
 
 
                     <span>
+
                         <strong>
                             Estado:
                         </strong>
 
                         Vigente
+
                     </span>
 
 
@@ -462,9 +456,7 @@
 
 <script>
 
-
 function searchDocuments() {
-
 
     let input =
         document
@@ -481,9 +473,7 @@ function searchDocuments() {
     let visible = 0;
 
 
-
     cards.forEach(function(card) {
-
 
         let text =
             card.innerText.toLowerCase();
@@ -501,9 +491,7 @@ function searchDocuments() {
 
         }
 
-
     });
-
 
 
     document
@@ -511,11 +499,9 @@ function searchDocuments() {
         .textContent = visible;
 
 
-
     let noResults =
         document
         .getElementById("noResults");
-
 
 
     if (visible === 0) {
@@ -527,7 +513,6 @@ function searchDocuments() {
         noResults.style.display = "none";
 
     }
-
 
 }
 
