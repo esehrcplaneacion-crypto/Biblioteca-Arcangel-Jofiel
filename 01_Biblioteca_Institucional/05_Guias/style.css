@@ -16,8 +16,8 @@
     --gris-texto: #626779;
     --gris-oscuro: #303443;
 
-    --sombra:
-        0 10px 30px rgba(0, 17, 120, 0.08);
+    --sombra: 0 10px 30px rgba(0, 17, 120, 0.08);
+
 }
 
 
@@ -25,6 +25,7 @@
 
     margin: 0;
     padding: 0;
+
     box-sizing: border-box;
 
 }
@@ -40,11 +41,11 @@ html {
 body {
 
     font-family:
+        "Segoe UI",
         Arial,
-        Helvetica,
         sans-serif;
 
-    background: var(--blanco);
+    background: var(--gris-fondo);
 
     color: var(--gris-oscuro);
 
@@ -57,29 +58,22 @@ a {
 
     text-decoration: none;
 
-}
-
-
-img {
-
-    max-width: 100%;
+    color: inherit;
 
 }
-
 
 
 /* =========================
    HEADER
 ========================= */
 
-
 .header {
 
     width: 100%;
 
-    min-height: 82px;
+    min-height: 90px;
 
-    padding: 14px 6%;
+    background: var(--blanco);
 
     display: flex;
 
@@ -87,18 +81,16 @@ img {
 
     justify-content: space-between;
 
+    padding: 15px 7%;
+
     gap: 30px;
 
-    background: var(--blanco);
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.04);
 
-    border-bottom:
-        1px solid var(--gris-claro);
+    position: relative;
 
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
+    z-index: 10;
 
 }
 
@@ -116,14 +108,9 @@ img {
 
 .logo-placeholder {
 
-    width: 58px;
+    width: 62px;
 
-    height: 58px;
-
-    border:
-        3px solid var(--rojo);
-
-    border-radius: 12px;
+    height: 62px;
 
     display: flex;
 
@@ -131,26 +118,16 @@ img {
 
     justify-content: center;
 
-    background: var(--blanco);
-
-    box-shadow:
-        0 4px 12px
-        rgba(200, 16, 46, 0.12);
-
-    overflow: hidden;
-
 }
 
 
 .logo-placeholder img {
 
-    width: 38px;
+    width: 100%;
 
-    height: 38px;
+    height: 100%;
 
     object-fit: contain;
-
-    display: block;
 
 }
 
@@ -159,13 +136,13 @@ img {
 
     display: block;
 
+    color: var(--rojo);
+
     font-size: 11px;
 
-    font-weight: bold;
+    font-weight: 700;
 
-    letter-spacing: 1.2px;
-
-    color: var(--rojo);
+    letter-spacing: 1.1px;
 
     margin-bottom: 2px;
 
@@ -174,19 +151,15 @@ img {
 
 .logo-area h1 {
 
-    font-size: 21px;
+    color: var(--azul);
+
+    font-size: 22px;
 
     font-weight: 700;
 
-    color: var(--azul);
+    line-height: 1.2;
 
 }
-
-
-
-/* =========================
-   NAV
-========================= */
 
 
 .nav {
@@ -195,22 +168,18 @@ img {
 
     align-items: center;
 
-    gap: 25px;
+    gap: 30px;
 
 }
 
 
 .nav a {
 
-    color: var(--azul);
+    color: var(--gris-oscuro);
 
     font-size: 14px;
 
     font-weight: 600;
-
-    position: relative;
-
-    padding: 8px 0;
 
     transition: 0.3s;
 
@@ -224,39 +193,9 @@ img {
 }
 
 
-.nav a::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: 0;
-
-    width: 0;
-
-    height: 2px;
-
-    background: var(--rojo);
-
-    transition: 0.3s;
-
-}
-
-
-.nav a:hover::after {
-
-    width: 100%;
-
-}
-
-
-
 /* =========================
    RED LINE
 ========================= */
-
 
 .red-line {
 
@@ -264,16 +203,19 @@ img {
 
     height: 4px;
 
-    background: var(--rojo);
+    background:
+        linear-gradient(
+            90deg,
+            var(--rojo),
+            var(--rojo-oscuro)
+        );
 
 }
-
 
 
 /* =========================
    BREADCRUMB
 ========================= */
-
 
 .breadcrumb {
 
@@ -281,20 +223,17 @@ img {
 
     margin: 0 auto;
 
-    padding:
-        22px 6% 10px;
+    padding: 22px 30px 10px;
 
     display: flex;
 
     align-items: center;
 
-    flex-wrap: wrap;
-
-    gap: 9px;
-
-    font-size: 13px;
+    gap: 10px;
 
     color: var(--gris-texto);
+
+    font-size: 13px;
 
 }
 
@@ -317,9 +256,7 @@ img {
 
 .breadcrumb span {
 
-    color: var(--rojo);
-
-    font-weight: bold;
+    color: #A0A4B1;
 
 }
 
@@ -331,29 +268,25 @@ img {
 }
 
 
-
 /* =========================
    HERO
 ========================= */
-
 
 .hero {
 
     max-width: 1200px;
 
-    margin:
-        10px auto 55px;
+    min-height: 350px;
 
-    padding:
-        70px 7%;
+    margin: 15px auto 50px;
 
-    min-height: 400px;
-
-    border-radius: 24px;
+    padding: 55px 65px;
 
     position: relative;
 
     overflow: hidden;
+
+    border-radius: 24px;
 
     display: flex;
 
@@ -361,22 +294,17 @@ img {
 
     justify-content: space-between;
 
-    gap: 50px;
+    gap: 40px;
 
     background:
-
         linear-gradient(
             135deg,
-            var(--azul) 0%,
-            var(--azul-medio) 100%
+            var(--azul-oscuro),
+            var(--azul-medio)
         );
 
-    color: var(--blanco);
-
     box-shadow:
-
-        0 18px 45px
-        rgba(0, 17, 120, 0.18);
+        0 18px 45px rgba(0, 17, 120, 0.18);
 
 }
 
@@ -387,19 +315,18 @@ img {
 
     position: absolute;
 
-    width: 350px;
+    width: 320px;
 
-    height: 350px;
-
-    border:
-        1px solid
-        rgba(255,255,255,0.10);
+    height: 320px;
 
     border-radius: 50%;
 
-    right: -100px;
+    right: -120px;
 
-    top: -100px;
+    top: -140px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
 
 }
 
@@ -410,19 +337,42 @@ img {
 
     position: absolute;
 
-    width: 250px;
+    width: 240px;
 
-    height: 250px;
-
-    border:
-        1px solid
-        rgba(255,255,255,0.08);
+    height: 240px;
 
     border-radius: 50%;
 
-    right: 50px;
+    left: -120px;
 
-    bottom: -170px;
+    bottom: -150px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+}
+
+
+.medical-cross {
+
+    position: absolute;
+
+    color: rgba(255, 255, 255, 0.06);
+
+    font-size: 180px;
+
+    line-height: 1;
+
+}
+
+
+.cross-one {
+
+    right: 250px;
+
+    top: -30px;
+
+    transform: rotate(10deg);
 
 }
 
@@ -442,32 +392,38 @@ img {
 
     display: inline-block;
 
-    font-size: 12px;
+    padding: 7px 14px;
 
-    font-weight: bold;
+    border-radius: 30px;
 
-    letter-spacing: 2px;
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.16);
 
     color: #FFFFFF;
 
-    margin-bottom: 15px;
+    font-size: 11px;
 
-    padding-left: 12px;
+    font-weight: 700;
 
-    border-left:
-        3px solid var(--rojo);
+    letter-spacing: 1.5px;
+
+    margin-bottom: 18px;
 
 }
 
 
 .hero h2 {
 
-    font-size:
-        clamp(38px, 5vw, 62px);
+    color: var(--blanco);
 
-    line-height: 1.05;
+    font-size: 46px;
 
-    margin-bottom: 22px;
+    line-height: 1.1;
+
+    margin-bottom: 20px;
 
     font-weight: 800;
 
@@ -476,25 +432,20 @@ img {
 
 .hero h2 span {
 
-    color: #FFFFFF;
-
-    position: relative;
+    color: #DCE1FF;
 
 }
 
 
 .hero p {
 
-    max-width: 670px;
+    color: rgba(255, 255, 255, 0.85);
 
-    font-size: 17px;
+    font-size: 16px;
 
-    line-height: 1.8;
+    max-width: 680px;
 
-    color:
-        rgba(255,255,255,0.88);
-
-    margin-bottom: 30px;
+    line-height: 1.7;
 
 }
 
@@ -503,110 +454,55 @@ img {
 
     display: flex;
 
-    flex-wrap: wrap;
+    gap: 45px;
 
-    gap: 18px;
+    margin-top: 30px;
 
 }
 
 
-.hero-info > div {
+.hero-info div {
 
-    padding:
-        16px 20px;
+    display: flex;
 
-    border-left:
-        3px solid var(--rojo);
+    flex-direction: column;
 
-    background:
-        rgba(255,255,255,0.08);
-
-    border-radius:
-        0 10px 10px 0;
-
-    min-width: 210px;
+    gap: 3px;
 
 }
 
 
 .hero-info strong {
 
-    display: block;
-
-    font-size: 13px;
-
     color: var(--blanco);
 
-    margin-bottom: 4px;
+    font-size: 13px;
 
 }
 
 
 .hero-info span {
 
+    color: rgba(255, 255, 255, 0.68);
+
     font-size: 12px;
 
-    color:
-        rgba(255,255,255,0.70);
-
 }
-
-
-
-/* =========================
-   MEDICAL CROSS
-========================= */
-
-
-.medical-cross {
-
-    position: absolute;
-
-    color:
-        rgba(255,255,255,0.08);
-
-    font-size: 80px;
-
-    font-weight: bold;
-
-    z-index: 1;
-
-}
-
-
-.cross-one {
-
-    right: 38%;
-
-    top: 12%;
-
-    transform:
-        rotate(-10deg);
-
-}
-
-
-
-/* =========================
-   HERO ICON
-========================= */
 
 
 .hero-icon {
 
-    position: relative;
+    min-width: 150px;
 
-    z-index: 3;
-
-    min-width: 190px;
-
-    height: 190px;
+    min-height: 150px;
 
     border-radius: 50%;
 
+    background:
+        rgba(255, 255, 255, 0.08);
+
     border:
-        2px solid
-        rgba(255,255,255,0.20);
+        1px solid rgba(255, 255, 255, 0.12);
 
     display: flex;
 
@@ -616,49 +512,53 @@ img {
 
     justify-content: center;
 
-    background:
-        rgba(255,255,255,0.06);
+    position: relative;
 
-    box-shadow:
-
-        inset 0 0 0 15px
-        rgba(255,255,255,0.03);
+    z-index: 2;
 
 }
 
 
 .big-cross {
 
-    font-size: 60px;
-
-    line-height: 1;
+    font-size: 65px;
 
     color: var(--blanco);
 
-    margin-bottom: 12px;
+    line-height: 1;
+
+    margin-bottom: 8px;
 
 }
 
 
 .hero-icon span {
 
-    font-size: 10px;
+    color: rgba(255, 255, 255, 0.75);
 
-    font-weight: bold;
+    font-size: 11px;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 
-    color:
-        rgba(255,255,255,0.85);
+    font-weight: 700;
 
 }
 
 
-
 /* =========================
-   DOCUMENTS
+   MAIN
 ========================= */
 
+main {
+
+    width: 100%;
+
+}
+
+
+/* =========================
+   DOCUMENT SECTION
+========================= */
 
 .documents-section {
 
@@ -666,8 +566,7 @@ img {
 
     margin: 0 auto;
 
-    padding:
-        20px 6% 60px;
+    padding: 0 30px 50px;
 
 }
 
@@ -682,71 +581,53 @@ img {
 
     gap: 30px;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
 }
 
 
 .small-title {
 
-    display: block;
+    color: var(--rojo);
 
     font-size: 11px;
 
-    font-weight: bold;
+    font-weight: 800;
 
-    letter-spacing: 2px;
-
-    color: var(--rojo);
-
-    margin-bottom: 8px;
+    letter-spacing: 1.5px;
 
 }
 
 
 .section-heading h2 {
 
-    font-size: 32px;
-
-    line-height: 1.2;
-
     color: var(--azul);
 
-    margin-bottom: 10px;
+    font-size: 30px;
+
+    margin: 5px 0 8px;
 
 }
 
 
 .section-heading p {
 
-    max-width: 650px;
-
     color: var(--gris-texto);
 
-    font-size: 15px;
+    font-size: 14px;
 
 }
-
-
-
-/* =========================
-   COUNTER
-========================= */
 
 
 .counter {
 
     min-width: 130px;
 
-    padding:
-        18px 22px;
+    padding: 15px 20px;
 
-    border-radius: 15px;
+    border-radius: 14px;
 
     background: var(--azul-claro);
-
-    border-left:
-        4px solid var(--rojo);
 
     text-align: center;
 
@@ -759,7 +640,7 @@ img {
 
     color: var(--azul);
 
-    font-size: 30px;
+    font-size: 25px;
 
     line-height: 1;
 
@@ -768,58 +649,40 @@ img {
 
 .counter span {
 
-    font-size: 12px;
-
     color: var(--gris-texto);
 
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
+    font-size: 12px;
 
 }
-
 
 
 /* =========================
    SEARCH
 ========================= */
 
-
 .search-box {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
 
     width: 100%;
 
-    margin-bottom: 35px;
+    min-height: 58px;
 
-    padding:
-        15px 20px;
-
-    background:
-        var(--gris-fondo);
+    background: var(--blanco);
 
     border:
         1px solid var(--gris-claro);
 
     border-radius: 14px;
 
-    transition: 0.3s;
+    display: flex;
 
-}
+    align-items: center;
 
+    padding: 0 20px;
 
-.search-box:focus-within {
-
-    border-color: var(--azul);
+    margin-bottom: 30px;
 
     box-shadow:
-        0 0 0 4px
-        rgba(0,17,120,0.06);
+        0 5px 18px rgba(0, 17, 120, 0.04);
 
 }
 
@@ -830,7 +693,7 @@ img {
 
     font-size: 25px;
 
-    line-height: 1;
+    margin-right: 12px;
 
 }
 
@@ -845,25 +708,23 @@ img {
 
     background: transparent;
 
-    color: var(--gris-oscuro);
+    font-size: 14px;
 
-    font-size: 15px;
+    color: var(--gris-oscuro);
 
 }
 
 
 .search-box input::placeholder {
 
-    color: #9297A8;
+    color: #9A9EAC;
 
 }
-
 
 
 /* =========================
    DOCUMENT GRID
 ========================= */
-
 
 .documents-grid {
 
@@ -877,19 +738,11 @@ img {
 }
 
 
-
 /* =========================
    DOCUMENT CARD
 ========================= */
 
-
 .document-card {
-
-    display: flex;
-
-    gap: 22px;
-
-    padding: 28px;
 
     background: var(--blanco);
 
@@ -898,45 +751,34 @@ img {
 
     border-radius: 18px;
 
+    padding: 28px;
+
+    display: flex;
+
+    gap: 22px;
+
     box-shadow: var(--sombra);
 
     transition:
-
         transform 0.3s ease,
-
-        box-shadow 0.3s ease,
-
-        border-color 0.3s ease;
+        box-shadow 0.3s ease;
 
 }
 
 
 .document-card:hover {
 
-    transform:
-        translateY(-5px);
-
-    border-color:
-        rgba(0,17,120,0.18);
+    transform: translateY(-4px);
 
     box-shadow:
-
-        0 18px 40px
-        rgba(0,17,120,0.12);
+        0 16px 35px rgba(0, 17, 120, 0.12);
 
 }
 
 
-
-/* =========================
-   DOCUMENT ICON
-========================= */
-
-
 .document-icon {
 
-    flex:
-        0 0 58px;
+    flex-shrink: 0;
 
     width: 58px;
 
@@ -944,23 +786,19 @@ img {
 
     border-radius: 15px;
 
+    background: var(--azul-claro);
+
+    color: var(--azul);
+
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    background:
-        var(--azul-claro);
-
-    color: var(--azul);
-
     font-size: 27px;
 
-    font-weight: bold;
-
-    border-bottom:
-        3px solid var(--rojo);
+    font-weight: 700;
 
 }
 
@@ -976,15 +814,15 @@ img {
 
     display: inline-block;
 
-    margin-bottom: 7px;
-
     color: var(--rojo);
 
     font-size: 10px;
 
-    font-weight: bold;
+    font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
+
+    margin-bottom: 5px;
 
 }
 
@@ -993,11 +831,11 @@ img {
 
     color: var(--azul);
 
-    font-size: 21px;
+    font-size: 20px;
 
     line-height: 1.3;
 
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 
 }
 
@@ -1006,19 +844,13 @@ img {
 
     color: var(--gris-texto);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.65;
+    line-height: 1.6;
 
     margin-bottom: 18px;
 
 }
-
-
-
-/* =========================
-   METADATA
-========================= */
 
 
 .metadata {
@@ -1028,40 +860,35 @@ img {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 8px;
+    gap: 9px;
 
-    margin-bottom: 20px;
+    padding: 15px 0;
 
-    padding: 14px;
+    border-top:
+        1px solid var(--gris-claro);
 
-    background:
-        var(--gris-fondo);
+    border-bottom:
+        1px solid var(--gris-claro);
 
-    border-radius: 10px;
+    margin-bottom: 18px;
 
 }
 
 
 .metadata span {
 
-    font-size: 12px;
-
     color: var(--gris-texto);
+
+    font-size: 11px;
 
 }
 
 
 .metadata strong {
 
-    color: var(--azul);
+    color: var(--gris-oscuro);
 
 }
-
-
-
-/* =========================
-   BUTTON
-========================= */
 
 
 .document-button {
@@ -1070,20 +897,21 @@ img {
 
     align-items: center;
 
-    gap: 12px;
+    justify-content: center;
 
-    padding:
-        11px 17px;
+    gap: 10px;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
 
     background: var(--azul);
 
     color: var(--blanco);
 
-    border-radius: 9px;
+    font-size: 12px;
 
-    font-size: 13px;
-
-    font-weight: bold;
+    font-weight: 700;
 
     transition: 0.3s;
 
@@ -1094,24 +922,19 @@ img {
 
     background: var(--rojo);
 
-    transform:
-        translateX(3px);
-
 }
 
 
 .document-button span {
 
-    font-size: 17px;
+    font-size: 16px;
 
 }
-
 
 
 /* =========================
    NO RESULTS
 ========================= */
-
 
 .no-results {
 
@@ -1119,42 +942,25 @@ img {
 
     text-align: center;
 
-    padding:
-        55px 20px;
+    padding: 50px 20px;
 
-    background:
-        var(--gris-fondo);
+    background: var(--blanco);
 
     border-radius: 18px;
 
-    margin-top: 20px;
+    border:
+        1px solid var(--gris-claro);
 
 }
 
 
-.no-results > div {
-
-    width: 60px;
-
-    height: 60px;
-
-    margin:
-        0 auto 15px;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-        var(--azul-claro);
+.no-results div {
 
     color: var(--azul);
 
-    font-size: 25px;
+    font-size: 40px;
+
+    margin-bottom: 10px;
 
 }
 
@@ -1172,16 +978,14 @@ img {
 
     color: var(--gris-texto);
 
-    font-size: 14px;
+    font-size: 13px;
 
 }
-
 
 
 /* =========================
    INFORMATION
 ========================= */
-
 
 .information {
 
@@ -1189,13 +993,21 @@ img {
 
     margin: 0 auto;
 
-    padding:
-        0 6% 70px;
+    padding: 0 30px 60px;
 
 }
 
 
 .information-card {
+
+    background: var(--rojo-claro);
+
+    border:
+        1px solid #F5CCD3;
+
+    border-radius: 18px;
+
+    padding: 25px 30px;
 
     display: flex;
 
@@ -1203,24 +1015,12 @@ img {
 
     gap: 20px;
 
-    padding:
-        25px 28px;
-
-    background:
-        var(--rojo-claro);
-
-    border-left:
-        5px solid var(--rojo);
-
-    border-radius: 12px;
-
 }
 
 
 .info-icon {
 
-    flex:
-        0 0 42px;
+    flex-shrink: 0;
 
     width: 42px;
 
@@ -1228,19 +1028,17 @@ img {
 
     border-radius: 50%;
 
+    background: var(--rojo);
+
+    color: var(--blanco);
+
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    background: var(--rojo);
-
-    color: var(--blanco);
-
-    font-size: 20px;
-
-    font-weight: bold;
+    font-weight: 800;
 
 }
 
@@ -1254,17 +1052,13 @@ img {
 
 .information-card span {
 
-    display: block;
-
     color: var(--rojo);
 
     font-size: 10px;
 
-    font-weight: bold;
+    font-weight: 800;
 
-    letter-spacing: 1.5px;
-
-    margin-bottom: 5px;
+    letter-spacing: 1.3px;
 
 }
 
@@ -1273,9 +1067,9 @@ img {
 
     color: var(--azul);
 
-    font-size: 19px;
+    font-size: 18px;
 
-    margin-bottom: 6px;
+    margin: 3px 0 5px;
 
 }
 
@@ -1284,28 +1078,22 @@ img {
 
     color: var(--gris-texto);
 
-    font-size: 14px;
-
-    line-height: 1.7;
+    font-size: 13px;
 
 }
-
 
 
 /* =========================
    FOOTER
 ========================= */
 
-
 .footer {
 
-    padding:
-        35px 6%;
-
-    background:
-        var(--azul-oscuro);
+    background: var(--azul-oscuro);
 
     color: var(--blanco);
+
+    padding: 35px 7%;
 
     display: flex;
 
@@ -1313,7 +1101,7 @@ img {
 
     justify-content: space-between;
 
-    gap: 25px;
+    gap: 30px;
 
 }
 
@@ -1322,19 +1110,18 @@ img {
 
     font-size: 13px;
 
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 
 }
 
 
 .footer p {
 
-    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.6);
 
     font-size: 12px;
 
-    color:
-        rgba(255,255,255,0.65);
+    margin-top: 3px;
 
 }
 
@@ -1343,8 +1130,6 @@ img {
 
     display: flex;
 
-    align-items: center;
-
     gap: 25px;
 
 }
@@ -1352,11 +1137,9 @@ img {
 
 .footer-right a {
 
-    color: var(--blanco);
+    color: rgba(255, 255, 255, 0.75);
 
-    font-size: 13px;
-
-    font-weight: 600;
+    font-size: 12px;
 
     transition: 0.3s;
 
@@ -1365,24 +1148,20 @@ img {
 
 .footer-right a:hover {
 
-    color: var(--rojo);
+    color: var(--blanco);
 
 }
 
 
-
 /* =========================
-   TABLET
+   RESPONSIVE
 ========================= */
-
 
 @media (max-width: 900px) {
 
-
     .header {
 
-        padding:
-            14px 4%;
+        padding: 15px 4%;
 
     }
 
@@ -1394,37 +1173,20 @@ img {
     }
 
 
-    .nav a {
-
-        font-size: 12px;
-
-    }
-
-
     .hero {
 
-        margin-left: 4%;
+        margin-left: 20px;
 
-        margin-right: 4%;
+        margin-right: 20px;
 
-        padding:
-            55px 6%;
-
-    }
-
-
-    .hero-icon {
-
-        min-width: 150px;
-
-        height: 150px;
+        padding: 45px;
 
     }
 
 
-    .big-cross {
+    .hero h2 {
 
-        font-size: 50px;
+        font-size: 38px;
 
     }
 
@@ -1438,25 +1200,15 @@ img {
 }
 
 
-
-/* =========================
-   MOBILE
-========================= */
-
-
 @media (max-width: 650px) {
 
-
     .header {
-
-        position: relative;
 
         flex-direction: column;
 
         align-items: flex-start;
 
-        padding:
-            16px 5%;
+        padding: 15px 20px;
 
     }
 
@@ -1465,39 +1217,43 @@ img {
 
         width: 100%;
 
-        flex-wrap: wrap;
+        justify-content: flex-start;
 
-        gap:
-            10px 18px;
+        gap: 20px;
 
     }
 
 
-    .nav a {
+    .logo-area h1 {
 
-        font-size: 12px;
+        font-size: 18px;
+
+    }
+
+
+    .institution {
+
+        font-size: 9px;
 
     }
 
 
     .breadcrumb {
 
-        padding-left: 5%;
+        padding-left: 20px;
 
-        padding-right: 5%;
+        padding-right: 20px;
+
+        flex-wrap: wrap;
 
     }
 
 
     .hero {
 
-        margin:
-            10px 4% 40px;
+        margin: 10px 15px 40px;
 
-        padding:
-            45px 7%;
-
-        min-height: auto;
+        padding: 35px 25px;
 
         flex-direction: column;
 
@@ -1508,14 +1264,14 @@ img {
 
     .hero h2 {
 
-        font-size: 40px;
+        font-size: 32px;
 
     }
 
 
     .hero p {
 
-        font-size: 15px;
+        font-size: 14px;
 
     }
 
@@ -1524,14 +1280,7 @@ img {
 
         flex-direction: column;
 
-        width: 100%;
-
-    }
-
-
-    .hero-info > div {
-
-        width: 100%;
+        gap: 15px;
 
     }
 
@@ -1540,27 +1289,25 @@ img {
 
         align-self: center;
 
-        min-width: 145px;
+        min-width: 120px;
 
-        height: 145px;
+        min-height: 120px;
 
     }
 
 
-    .cross-one {
+    .big-cross {
 
-        right: 5%;
-
-        top: 5%;
+        font-size: 50px;
 
     }
 
 
     .documents-section {
 
-        padding-left: 5%;
+        padding-left: 20px;
 
-        padding-right: 5%;
+        padding-right: 20px;
 
     }
 
@@ -1570,13 +1317,6 @@ img {
         flex-direction: column;
 
         align-items: flex-start;
-
-    }
-
-
-    .section-heading h2 {
-
-        font-size: 27px;
 
     }
 
@@ -1597,24 +1337,6 @@ img {
     }
 
 
-    .document-icon {
-
-        width: 52px;
-
-        height: 52px;
-
-        flex-basis: 52px;
-
-    }
-
-
-    .document-info h3 {
-
-        font-size: 19px;
-
-    }
-
-
     .metadata {
 
         grid-template-columns: 1fr;
@@ -1624,16 +1346,14 @@ img {
 
     .information {
 
-        padding-left: 5%;
+        padding-left: 20px;
 
-        padding-right: 5%;
+        padding-right: 20px;
 
     }
 
 
     .information-card {
-
-        flex-direction: column;
 
         padding: 22px;
 
@@ -1646,8 +1366,7 @@ img {
 
         align-items: flex-start;
 
-        padding:
-            30px 5%;
+        padding: 30px 20px;
 
     }
 
@@ -1655,8 +1374,6 @@ img {
     .footer-right {
 
         flex-direction: column;
-
-        align-items: flex-start;
 
         gap: 10px;
 
