@@ -98,14 +98,23 @@ a {
     align-items: center;
     justify-content: center;
 
-    font-size: 10px;
-    font-weight: bold;
-
     color: var(--azul);
 
     background: #ffffff;
 
     box-shadow: 0 4px 12px rgba(200, 16, 46, 0.12);
+
+    overflow: hidden;
+}
+
+/* IMAGEN DEL LOGO */
+.logo-placeholder img {
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+
+    display: block;
 }
 
 .institution {
