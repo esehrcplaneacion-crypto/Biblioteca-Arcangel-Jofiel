@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Políticas | Biblioteca Institucional</title>
+
+    <meta name="description"
+          content="Políticas institucionales de la E.S.E. Hospital Regional Centro">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     ENCABEZADO
+     ========================= -->
+
+<header class="header">
+
+    <div class="logo-area">
+
+        <a href="../../index.html" class="logo-placeholder">
+
+            <img src="../../logo-hospital.jpg"
+                 alt="Logo E.S.E. Hospital Regional Centro">
+
+        </a>
+
+
+        <div>
+
+            <span class="institution">
+                E.S.E. HOSPITAL REGIONAL CENTRO
+            </span>
+
+            <h1>
+                Biblioteca Institucional
+            </h1>
+
+        </div>
+
+    </div>
+
+
+    <nav class="nav">
+
+        <a href="../../index.html">
+            Inicio
+        </a>
+
+        <a href="../index.html">
+            Biblioteca
+        </a>
+
+        <a href="#politicas">
+            Políticas
+        </a>
+
+    </nav>
+
+</header>
+
+
+<div class="red-line"></div>
+
+
+
+<!-- =========================
+     RUTA DE NAVEGACIÓN
+     ========================= -->
+
+<div class="breadcrumb">
+
+    <a href="../../index.html">
+        Inicio
+    </a>
+
+    <span>›</span>
+
+    <a href="../index.html">
+        Biblioteca Institucional
+    </a>
+
+    <span>›</span>
+
+    <strong>
+        Políticas
+    </strong>
+
+</div>
+
+
+
+<!-- =========================
+     HERO
+     ========================= -->
+
+<section class="hero" id="politicas">
+
+    <div class="medical-cross cross-one">
+        ✚
+    </div>
+
+    <div class="hero-content">
+
+        <span class="section-label">
+            BIBLIOTECA INSTITUCIONAL
+        </span>
+
+
+        <h2>
+            Políticas
+            <span>Institucionales</span>
+        </h2>
+
+
+        <p>
+            Consulta los lineamientos y directrices que orientan
+            la gestión y el desarrollo de las actividades de la
+            E.S.E. Hospital Regional Centro.
+        </p>
+
+
+        <div class="hero-info">
+
+            <div>
+
+                <strong>
+                    Documentación oficial
+                </strong>
+
+                <span>
+                    Lineamientos institucionales
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Consulta organizada
+                </strong>
+
+                <span>
+                    Información centralizada
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-icon">
+
+        <div class="big-cross">
+            ✚
+        </div>
+
+        <span>
+            POLÍTICAS
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTENIDO
+     ========================= -->
+
+<main>
+
+
+<section class="documents-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="small-title">
+                DOCUMENTACIÓN
+            </span>
+
+            <h2>
+                Políticas disponibles
+            </h2>
+
+            <p>
+                Selecciona una política para consultar su
+                información y acceder al documento correspondiente.
+            </p>
+
+        </div>
+
+
+        <div class="counter">
+
+            <strong>
+                0
+            </strong>
+
+            <span>
+                documentos
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         BUSCADOR
+         ========================= -->
+
+    <div class="search-box">
+
+        <span class="search-icon">
+            ⌕
+        </span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar una política..."
+            onkeyup="searchDocuments()"
+        >
+
+    </div>
+
+
+
+    <!-- =========================
+         TARJETAS
+         ========================= -->
+
+    <div class="documents-grid" id="documentsGrid">
+
+
+        <!-- DOCUMENTO EJEMPLO -->
+
+        <article class="document-card">
+
+            <div class="document-icon">
+                ✚
+            </div>
+
+
+            <div class="document-info">
+
+                <span class="document-type">
+                    POLÍTICA
+                </span>
+
+                <h3>
+                    Nombre de la política
+                </h3>
+
+                <p>
+                    Descripción breve de la política institucional
+                    y su propósito dentro de la E.S.E.
+                </p>
+
+
+                <div class="metadata">
+
+                    <span>
+                        <strong>Código:</strong>
+                        Por definir
+                    </span>
+
+                    <span>
+                        <strong>Versión:</strong>
+                        Por definir
+                    </span>
+
+                    <span>
+                        <strong>Fecha:</strong>
+                        Por definir
+                    </span>
+
+                </div>
+
+
+                <a href="#"
+                   class="document-button">
+
+                    Ver documento
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- MENSAJE CUANDO NO HAY RESULTADOS -->
+
+    <div class="no-results" id="noResults">
+
+        <div>
+            ✚
+        </div>
+
+        <h3>
+            No se encontraron documentos
+        </h3>
+
+        <p>
+            Intenta realizar otra búsqueda.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     INFORMACIÓN
+     ========================= -->
+
+<section class="information">
+
+
+    <div class="information-card">
+
+        <div class="info-icon">
+            !
+        </div>
+
+
+        <div>
+
+            <span>
+                IMPORTANTE
+            </span>
+
+            <h3>
+                Consulta siempre la versión vigente
+            </h3>
+
+            <p>
+                Antes de utilizar un documento institucional,
+                verifica que corresponda a la versión vigente
+                y que se encuentre disponible en este repositorio.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer class="footer">
+
+    <div>
+
+        <strong>
+            E.S.E. HOSPITAL REGIONAL CENTRO
+        </strong>
+
+        <p>
+            Biblioteca Institucional
+        </p>
+
+    </div>
+
+
+    <div class="footer-right">
+
+        <a href="../index.html">
+            ← Biblioteca Institucional
+        </a>
+
+        <a href="../../index.html">
+            Inicio ↑
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     BUSCADOR
+     ========================= -->
+
+<script>
+
+function searchDocuments() {
+
+    let input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".document-card");
+
+    let visible = 0;
+
+
+    cards.forEach(function(card) {
+
+        let text =
+            card.innerText.toLowerCase();
+
+
+        if (text.includes(input)) {
+
+            card.style.display = "flex";
+
+            visible++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    document.querySelector(".counter strong")
+        .textContent = visible;
+
+
+    let noResults =
+        document.getElementById("noResults");
+
+
+    if (visible === 0) {
+
+        noResults.style.display = "block";
+
+    } else {
+
+        noResults.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
