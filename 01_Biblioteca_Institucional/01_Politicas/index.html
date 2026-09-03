@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -252,7 +253,9 @@
     <div class="documents-grid" id="documentsGrid">
 
 
-        <!-- DOCUMENTO EJEMPLO -->
+        <!-- =========================
+             POLÍTICA DE GESTIÓN DEL CONOCIMIENTO
+             ========================= -->
 
         <article class="document-card">
 
@@ -268,12 +271,13 @@
                 </span>
 
                 <h3>
-                    Nombre de la política
+                    Política de Gestión del Conocimiento
                 </h3>
 
                 <p>
-                    Descripción breve de la política institucional
-                    y su propósito dentro de la E.S.E.
+                    Documento institucional que establece los
+                    lineamientos para la gestión del conocimiento
+                    en la E.S.E. Hospital Regional Centro.
                 </p>
 
 
@@ -281,24 +285,30 @@
 
                     <span>
                         <strong>Código:</strong>
-                        Por definir
+                        GCO-PO-01
                     </span>
 
                     <span>
                         <strong>Versión:</strong>
-                        Por definir
+                        1
                     </span>
 
                     <span>
                         <strong>Fecha:</strong>
-                        Por definir
+                        30 de enero de 2025
+                    </span>
+
+                    <span>
+                        <strong>Estado:</strong>
+                        Vigente
                     </span>
 
                 </div>
 
 
-                <a href="#"
-                   class="document-button">
+                <a href="./documentos/politica_gestion_del_conocimiento.pdf"
+                   class="document-button"
+                   target="_blank">
 
                     Ver documento
                     <span>→</span>
@@ -313,7 +323,9 @@
     </div>
 
 
-    <!-- MENSAJE CUANDO NO HAY RESULTADOS -->
+    <!-- =========================
+         MENSAJE CUANDO NO HAY RESULTADOS
+         ========================= -->
 
     <div class="no-results" id="noResults">
 
@@ -424,10 +436,13 @@ function searchDocuments() {
     let input =
         document.getElementById("searchInput")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
+
 
     let cards =
         document.querySelectorAll(".document-card");
+
 
     let visible = 0;
 
@@ -472,6 +487,26 @@ function searchDocuments() {
     }
 
 }
+
+
+/* =========================
+   MOSTRAR CONTADOR AL CARGAR
+   ========================= */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    searchDocuments();
+
+});
+
+</script>
+
+
+</body>
+
+</html>
+```
+
 
 </script>
 
